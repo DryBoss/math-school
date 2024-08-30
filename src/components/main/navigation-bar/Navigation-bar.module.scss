@@ -1,5 +1,9 @@
 @import "./../../../style/colors";
 
 .navigationBar {
+  display: flex;
   background-color: $primary-color;
+}
+
+.change-language-icon {
 }

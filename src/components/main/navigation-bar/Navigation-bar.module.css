@@ -1,3 +1,4 @@
 .navigationBar {
+  display: flex;
   background-color: #a1486b;
 }
