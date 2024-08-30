@@ -1,4 +1,34 @@
 .navigationBar {
   display: flex;
-  background-color: #a1486b;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: #4c7766;
+}
+
+.logo {
+  margin: 8px;
+}
+
+.menuSelection {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  border: 2px solid #fafafa;
+  border-radius: 16px;
+}
+.menu .menuItems {
+  padding: 12px 24px;
+  color: #fafafa;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.menu .menuItems.selected {
+  color: #333333;
+  background-color: #d7dfa3;
+  border-radius: 10px;
 }

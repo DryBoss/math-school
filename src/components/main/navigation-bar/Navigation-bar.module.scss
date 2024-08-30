@@ -2,8 +2,36 @@
 
 .navigationBar {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
   background-color: $primary-color;
 }
 
-.change-language-icon {
+//logo
+.logo {
+  margin: 8px;
+}
+
+//menu
+.menuSelection {
+  display: none;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  border: 2px solid $white;
+  border-radius: 16px;
+  .menuItems {
+    padding: 12px 24px;
+    color: $white;
+    font-size: 1rem;
+    cursor: pointer;
+    &.selected {
+      color: $black;
+      background-color: $secondary-color;
+      border-radius: 10px;
+    }
+  }
 }
