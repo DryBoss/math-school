@@ -12,14 +12,25 @@
 
 .menuSelection {
   display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  color: #fafafa;
+  font-weight: bold;
+  border: 2px solid #d7dfa3;
+  border-radius: 32px;
+}
+
+.arrow {
+  margin: 0 0 0 4px;
 }
 
 .menu {
-  display: flex;
+  display: none;
   align-items: center;
   list-style: none;
   font-weight: bold;
-  border: 1px solid #fafafa;
+  border: 2px solid #fafafa;
   border-radius: 32px;
 }
 .menu .menuItems {
@@ -35,6 +46,10 @@
   border-radius: 32px;
 }
 
+.visible {
+  display: flex;
+}
+
 .searchBar {
   display: flex;
   align-items: center;
@@ -45,13 +60,14 @@
 .searchBar .searchInput {
   padding: 12px 0 12px 20px;
   font-size: 16px;
+  background-color: transparent;
 }
 .searchBar .searchIcon {
   padding: 12px 20px 12px 12px;
 }
 
-.extras img {
-  padding: 12px;
+.searchList {
+  display: none;
 }
 
 .user {
@@ -59,4 +75,71 @@
   margin: 0 16px;
   background-color: #d7dfa3;
   border-radius: 32px;
+}
+
+.userOption {
+  background-color: #fafafa;
+  position: absolute;
+  padding: 8px;
+  background-color: #fafafa;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.userOption div {
+  width: 100%;
+  padding: 12px 24px;
+  color: #333333;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  /* Styles for mobile devices */
+}
+@media (max-width: 768px) {
+  .navigationBar {
+    justify-content: space-around;
+    padding: 8px;
+  }
+  .logo {
+    margin: 0 8px;
+  }
+  .searchBar .searchInput {
+    display: none;
+  }
+  .searchBar .searchIcon {
+    padding: 12px;
+  }
+  .user {
+    padding: 12px;
+    margin: 0 8px;
+    background-color: #d7dfa3;
+    border-radius: 32px;
+  }
+}
+@media (max-width: 1024px) {
+  .menuSelection {
+    display: flex;
+  }
+  .menu {
+    flex-direction: column;
+    position: absolute;
+    padding: 8px;
+    background-color: #fafafa;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .menu .menuItems {
+    width: 100%;
+    color: #333333;
+  }
+  .menu .menuItems.selected {
+    border-radius: 8px;
+  }
+}
+@media (min-width: 1024px) {
+  .menu {
+    display: flex;
+  }
 }

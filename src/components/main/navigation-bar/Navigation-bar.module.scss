@@ -16,13 +16,23 @@
 //menu
 .menuSelection {
   display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  color: $white;
+  font-weight: bold;
+  border: 2px solid $secondary-color;
+  border-radius: 32px;
+}
+.arrow {
+  margin: 0 0 0 4px;
 }
 .menu {
-  display: flex;
+  display: none;
   align-items: center;
   list-style: none;
   font-weight: bold;
-  border: 1px solid $white;
+  border: 2px solid $white;
   border-radius: 32px;
   .menuItems {
     padding: 12px 24px;
@@ -38,6 +48,10 @@
   }
 }
 
+.visible {
+  display: flex;
+}
+
 //search bar
 .searchBar {
   display: flex;
@@ -48,17 +62,14 @@
   .searchInput {
     padding: 12px 0 12px 20px;
     font-size: 16px;
+    background-color: transparent;
   }
   .searchIcon {
     padding: 12px 20px 12px 12px;
   }
 }
-
-//extras
-.extras {
-  img {
-    padding: 12px;
-  }
+.searchList {
+  display: none;
 }
 
 //user
@@ -67,4 +78,80 @@
   margin: 0 16px;
   background-color: $secondary-color;
   border-radius: 32px;
+}
+.userOption {
+  background-color: $white;
+  position: absolute;
+  padding: 8px;
+  background-color: $white;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  div {
+    width: 100%;
+    padding: 12px 24px;
+    color: $black;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for mobile devices */
+}
+
+@media (max-width: 768px) {
+  .navigationBar {
+    justify-content: space-around;
+    padding: 8px;
+  }
+  .logo {
+    margin: 0 8px;
+  }
+
+  //search bar
+  .searchBar {
+    .searchInput {
+      display: none;
+    }
+    .searchIcon {
+      padding: 12px;
+    }
+  }
+
+  //user
+  .user {
+    padding: 12px;
+    margin: 0 8px;
+    background-color: $secondary-color;
+    border-radius: 32px;
+  }
+}
+
+@media (max-width: 1024px) {
+  //menu
+  .menuSelection {
+    display: flex;
+  }
+  .menu {
+    flex-direction: column;
+    position: absolute;
+    padding: 8px;
+    background-color: $white;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    .menuItems {
+      width: 100%;
+      color: $black;
+      &.selected {
+        border-radius: 8px;
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+  //menu
+  .menu {
+    display: flex;
+  }
 }
