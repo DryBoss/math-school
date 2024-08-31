@@ -1,5 +1,4 @@
 import { useState } from "react";
-import MenuItems from "./Menu-items/Menu-items";
 
 import mathSchoolLogo from "./../../../assets/math-school-logo.svg";
 import searchIcon from "./../../../assets/ui-icons/search.svg";
@@ -28,7 +27,17 @@ function NavigationBar() {
         <img src="" alt="" />
       </div>
       <div className={styles.menu}>
-        <MenuItems />
+        {menuItems.map((item, index) => (
+          <div
+            key={index}
+            className={`${styles.menuItems} ${
+              activeScreen == item ? styles.selected : ""
+            }`}
+            onClick={() => setActiveScreen(item)}
+          >
+            {item}
+          </div>
+        ))}
       </div>
       {/*search*/}
       <div className="search-bar">
