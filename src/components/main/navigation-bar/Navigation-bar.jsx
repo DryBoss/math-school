@@ -9,7 +9,7 @@ import userProfile from "./../../../assets/ui-icons/user-profile.svg";
 import styles from "./Navigation-bar.module.css";
 
 function NavigationBar() {
-  const menuItems = ["Home", "Learn"];
+  const menuItems = ["Home", "Learn", "Certification"];
 
   const [activeScreen, setActiveScreen] = useState("Home");
 
@@ -40,9 +40,9 @@ function NavigationBar() {
         ))}
       </div>
       {/*search*/}
-      <div className="search-bar">
+      <div className={styles.searchBar}>
         <input type="text" />
-        <img src={searchIcon} alt="search" className="search" />
+        <img src={searchIcon} alt="search" className={styles.searchIcon} />
       </div>
       {/*extras*/}
       <img
