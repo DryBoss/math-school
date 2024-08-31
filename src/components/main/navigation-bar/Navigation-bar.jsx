@@ -41,18 +41,20 @@ function NavigationBar() {
       </div>
       {/*search*/}
       <div className={styles.searchBar}>
-        <input type="text" />
+        <input type="text" className={styles.searchInput} />
         <img src={searchIcon} alt="search" className={styles.searchIcon} />
       </div>
       {/*extras*/}
-      <img
-        src={changeLanguageIcon}
-        alt="language"
-        className="change-language"
-      />
-      <img src={changeThemeIcon} alt="theme" className="change-theme" />
+      <div className={styles.extras}>
+        <img
+          src={changeLanguageIcon}
+          alt="language"
+          className="change-language"
+        />
+        <img src={changeThemeIcon} alt="theme" className="change-theme" />
+      </div>
       {/*user*/}
-      <div className="account">
+      <div className={styles.user}>
         <img src={userProfile} alt="user" className="user" />
       </div>
     </div>

@@ -4,13 +4,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px;
+  padding: 16px;
   background-color: $primary-color;
 }
 
 //logo
 .logo {
-  margin: 8px;
+  margin: 0 16px;
 }
 
 //menu
@@ -21,9 +21,9 @@
   display: flex;
   align-items: center;
   list-style: none;
+  font-weight: bold;
   border: 1px solid $white;
-  border-radius: 16px;
-
+  border-radius: 32px;
   .menuItems {
     padding: 12px 24px;
     color: $white;
@@ -33,7 +33,38 @@
     &.selected {
       color: $black;
       background-color: $secondary-color;
-      border-radius: 10px;
+      border-radius: 32px;
     }
   }
+}
+
+//search bar
+.searchBar {
+  display: flex;
+  align-items: center;
+  color: $black;
+  background-color: $white;
+  border-radius: 32px;
+  .searchInput {
+    padding: 12px 0 12px 20px;
+    font-size: 16px;
+  }
+  .searchIcon {
+    padding: 12px 20px 12px 12px;
+  }
+}
+
+//extras
+.extras {
+  img {
+    padding: 12px;
+  }
+}
+
+//user
+.user {
+  padding: 12px;
+  margin: 0 16px;
+  background-color: $secondary-color;
+  border-radius: 32px;
 }
