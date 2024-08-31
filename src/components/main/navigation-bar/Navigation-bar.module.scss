@@ -1,16 +1,25 @@
 @import "./../../../style/colors";
 
 .navigationBar {
+  font-size: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
-  background-color: $primary-color;
+  padding: 1em;
+  background-color: $primary-dark;
 }
 
 //logo
 .logo {
-  margin: 0 16px;
+  display: flex;
+  align-items: center;
+  img {
+    margin: 0 0.5em 0 1em;
+  }
+  h1 {
+    color: $primary-light;
+    font-size: 1.5em;
+  }
 }
 
 //menu
@@ -18,32 +27,32 @@
   display: none;
   justify-content: center;
   align-items: center;
-  padding: 12px 24px;
-  color: $white;
+  padding: 0.75em 1.5em;
+  color: $secondary-light;
   font-weight: bold;
-  border: 2px solid $secondary-color;
-  border-radius: 32px;
+  border: 2px solid $primary-light;
+  border-radius: 2em;
 }
 .arrow {
-  margin: 0 0 0 4px;
+  margin: 0 0 0 0.25em;
 }
 .menu {
   display: none;
   align-items: center;
   list-style: none;
   font-weight: bold;
-  border: 2px solid $white;
-  border-radius: 32px;
+  border: 2px solid $primary-light;
+  border-radius: 2em;
   .menuItems {
-    padding: 12px 24px;
-    color: $white;
-    font-size: 1rem;
+    padding: 0.75em 1.5em;
+    color: $secondary-light;
+    font-size: 1em;
     transition: 0.3s;
     cursor: pointer;
     &.selected {
-      color: $black;
-      background-color: $secondary-color;
-      border-radius: 32px;
+      color: $secondary-dark;
+      background-color: $primary-light;
+      border-radius: 2em;
     }
   }
 }
@@ -56,16 +65,16 @@
 .searchBar {
   display: flex;
   align-items: center;
-  color: $black;
-  background-color: $white;
-  border-radius: 32px;
+  color: $secondary-dark;
+  background-color: $secondary-light;
+  border-radius: 2em;
   .searchInput {
-    padding: 12px 0 12px 20px;
-    font-size: 16px;
+    padding: 0.75em 0 0.75em 1.25em;
+    font-size: 1em;
     background-color: transparent;
   }
   .searchIcon {
-    padding: 12px 20px 12px 12px;
+    padding: 0.75em 1.25em 0.75em 0.75em;
   }
 }
 .searchList {
@@ -74,56 +83,44 @@
 
 //user
 .user {
-  padding: 12px;
-  margin: 0 16px;
-  background-color: $secondary-color;
-  border-radius: 32px;
+  padding: 0.75em;
+  margin: 0 1em;
+  background-color: $primary-light;
+  border-radius: 2em;
 }
 .userOption {
-  background-color: $white;
   position: absolute;
-  padding: 8px;
-  background-color: $white;
+  padding: 0.5em;
+  background-color: $secondary-light;
   border: none;
-  border-radius: 16px;
+  border-radius: 1em;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   div {
     width: 100%;
-    padding: 12px 24px;
-    color: $black;
+    padding: 0.75em 1.5em;
+    color: $secondary-dark;
     font-weight: bold;
   }
 }
 
 @media (max-width: 480px) {
-  /* Styles for mobile devices */
+  h1 {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
   .navigationBar {
-    justify-content: space-around;
-    padding: 8px;
+    font-size: 12px;
   }
-  .logo {
-    margin: 0 8px;
-  }
-
   //search bar
   .searchBar {
     .searchInput {
       display: none;
     }
     .searchIcon {
-      padding: 12px;
+      padding: 0.75em;
     }
-  }
-
-  //user
-  .user {
-    padding: 12px;
-    margin: 0 8px;
-    background-color: $secondary-color;
-    border-radius: 32px;
   }
 }
 
@@ -135,16 +132,16 @@
   .menu {
     flex-direction: column;
     position: absolute;
-    padding: 8px;
-    background-color: $white;
+    padding: 0.5em;
+    background-color: $secondary-light;
     border: none;
-    border-radius: 16px;
+    border-radius: 1em;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     .menuItems {
       width: 100%;
-      color: $black;
+      color: $secondary-dark;
       &.selected {
-        border-radius: 8px;
+        border-radius: 0.5em;
       }
     }
   }

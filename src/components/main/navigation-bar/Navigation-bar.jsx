@@ -29,11 +29,10 @@ function NavigationBar() {
   return (
     <div className={styles.navigationBar}>
       {/*logo*/}
-      <img
-        src={mathSchoolLogo}
-        alt="math school logo"
-        className={styles.logo}
-      />
+      <div className={styles.logo}>
+        <img src={mathSchoolLogo} alt="math school logo" />
+        <h1>Math School</h1>
+      </div>
       {/*menu*/}
       <div>
         <div
