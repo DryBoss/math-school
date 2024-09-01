@@ -2,7 +2,7 @@
 *,
 *:before,
 *:after {
-  overflow: hidden;
+  overflow-x: hidden;
   box-sizing: border-box;
   margin: 0;
   flex-shrink: 0;
