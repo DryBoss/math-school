@@ -1,5 +1,6 @@
 import HeaderSection from "./sections/header-section/Header-section";
 import CourseSection from "./sections/course-section/Course-section";
+import FooterSection from "./sections/footer-section/Footer-section";
 
 import calculusIcon from "./../../../../assets/math-icons/calculus.png";
 import linearAlgebraIcon from "./../../../../assets/math-icons/linear-algebra.png";
@@ -54,6 +55,7 @@ function HomePage() {
           details={courseDetail[4]}
         />
       ))}
+      <FooterSection />
     </>
   );
 }
