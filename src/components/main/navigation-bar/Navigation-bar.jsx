@@ -4,20 +4,17 @@ import mathSchoolLogo from "./../../../assets/math-school-logo.svg";
 import downArrowIcon from "./../../../assets/ui-icons/down-arrow.svg";
 import downArrowIconBlack from "./../../../assets/ui-icons/down-arrow-black.svg";
 import searchIcon from "./../../../assets/ui-icons/search.svg";
-import changeLanguageIcon from "./../../../assets/ui-icons/change-language.svg";
 import changeThemeIcon from "./../../../assets/ui-icons/change-theme.svg";
 import userProfile from "./../../../assets/ui-icons/user-profile.svg";
 
 import styles from "./Navigation-bar.module.css";
 
-function NavigationBar() {
+function NavigationBar({ activeScreen, setActiveScreen }) {
   const [isMenuSelectionVisible, setIsMenuSelectionVisible] = useState(false);
   const menuItems = ["Home", "Learn", "Certification"];
   const [isSearchListVisible, setIsSearchListVisible] = useState(false);
   const searchList = ["Calculus", "Linear Algebra", "Statistics"];
   const [isUserOptionVisible, setIsUserOptionVisible] = useState(false);
-
-  const [activeScreen, setActiveScreen] = useState("Home");
 
   function toggleIsMenuSelectionVisible() {
     setIsMenuSelectionVisible(!isMenuSelectionVisible);
