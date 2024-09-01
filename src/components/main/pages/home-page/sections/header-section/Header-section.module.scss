@@ -6,20 +6,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 500px;
+  height: 30em;
   background-color: $secondary-dark;
-}
+  h1 {
+    padding: 0;
+    font-size: 4em;
+    color: $secondary-light;
+    text-align: center;
+  }
 
-h1 {
-  padding: 0;
-  font-size: 4em;
-  color: $secondary-light;
-  text-align: center;
-}
-
-h3 {
-  padding: 2em;
-  color: $primary-light;
+  h3 {
+    padding: 2em;
+    color: $primary-light;
+  }
 }
 
 .searchBar {
@@ -48,6 +47,6 @@ h3 {
 
 @media (max-width: 480px) {
   .header {
-    font-size: 8px;
+    font-size: 10px;
   }
 }

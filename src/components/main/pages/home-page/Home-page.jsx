@@ -7,9 +7,36 @@ import statisticsIcon from "./../../../../assets/math-icons/statistics.png";
 
 function HomePage() {
   const courseDetails = [
-    [calculusIcon, "Calculus"],
-    [linearAlgebraIcon, "Linear Algebra"],
-    [statisticsIcon, "Statistics"],
+    [
+      "#00c49a",
+      calculusIcon,
+      "Calculus",
+      [
+        "Lorem Ipsum is simply dummy text",
+        "Lorem Ipsum is simply dummy text",
+        "Lorem Ipsum is simply dummy text",
+      ],
+    ],
+    [
+      "#f8e16c",
+      linearAlgebraIcon,
+      "Linear Algebra",
+      [
+        "Lorem Ipsum is simply dummy text",
+        "Lorem Ipsum is simply dummy text",
+        "Lorem Ipsum is simply dummy text",
+      ],
+    ],
+    [
+      "#ffc2b4",
+      statisticsIcon,
+      "Statistics",
+      [
+        "Lorem Ipsum is simply dummy text",
+        "Lorem Ipsum is simply dummy text",
+        "Lorem Ipsum is simply dummy text",
+      ],
+    ],
   ];
   return (
     <>
@@ -17,8 +44,10 @@ function HomePage() {
       {courseDetails.map((courseDetail, index) => (
         <CourseSection
           key={index}
-          image={courseDetail[0]}
-          name={courseDetail[1]}
+          color={courseDetail[0]}
+          image={courseDetail[1]}
+          name={courseDetail[2]}
+          details={courseDetail[3]}
         />
       ))}
     </>
