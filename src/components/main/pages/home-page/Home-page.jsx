@@ -8,9 +8,10 @@ import statisticsIcon from "./../../../../assets/math-icons/statistics.png";
 function HomePage() {
   const courseDetails = [
     [
-      "#00c49a",
+      "#d9eee1",
       calculusIcon,
       "Calculus",
+      "The study of change and motion using derivatives and integrals.",
       [
         "Lorem Ipsum is simply dummy text",
         "Lorem Ipsum is simply dummy text",
@@ -18,9 +19,10 @@ function HomePage() {
       ],
     ],
     [
-      "#f8e16c",
+      "#fff4a3",
       linearAlgebraIcon,
       "Linear Algebra",
+      "The study of vectors, matrices, and linear transformations.",
       [
         "Lorem Ipsum is simply dummy text",
         "Lorem Ipsum is simply dummy text",
@@ -28,9 +30,10 @@ function HomePage() {
       ],
     ],
     [
-      "#ffc2b4",
+      "#f3ecea",
       statisticsIcon,
       "Statistics",
+      "The study of data collection, analysis, and interpretation.",
       [
         "Lorem Ipsum is simply dummy text",
         "Lorem Ipsum is simply dummy text",
@@ -47,7 +50,8 @@ function HomePage() {
           color={courseDetail[0]}
           image={courseDetail[1]}
           name={courseDetail[2]}
-          details={courseDetail[3]}
+          description={courseDetail[3]}
+          details={courseDetail[4]}
         />
       ))}
     </>

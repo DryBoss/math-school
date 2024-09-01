@@ -1,6 +1,6 @@
 import styles from "./Course-section.module.css";
 
-function CourseSection({ color, image, name, details }) {
+function CourseSection({ color, image, name, description, details }) {
   const style = {
     backgroundColor: color,
   };
@@ -8,12 +8,12 @@ function CourseSection({ color, image, name, details }) {
   return (
     <div className={styles.course} style={style}>
       <div className={styles.courseTitle}>
-        <img src={image} alt="" />
+        <img src={image} alt={name} />
         <h3>{name}</h3>
-        <button>Learn</button>
+        <p className={styles.description}>{description}</p>
+        <button>Learn {name}</button>
       </div>
       <div className={styles.courseDetails}>
-        <h4>Features :</h4>
         {details.map((detail, index) => {
           return <li key={index}>{detail}</li>;
         })}
